@@ -144,7 +144,7 @@
 
     1. Move to the cloned folder "OCIFundamentals" by running the following command:    
 
-        ***cd OCIFundamentals***
+        ***cd -OCIFundamentals***
 
     2. Run the following command to edit the config file:
 

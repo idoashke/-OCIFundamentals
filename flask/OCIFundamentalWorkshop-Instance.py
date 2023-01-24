@@ -134,7 +134,9 @@ def upload_file():
     upload_to_object_storage(file=f, file_name=f.filename, bucket_name=bucketName, object_storage_client=object_storage_client, namespace=namespace)
     object_link = get_object_link(os_region=region, os_namespace=namespace, bucket_name=bucketName, file_name=f.filename)
     write_to_db(collection=coll, file_name=f.filename, object_link=object_link)
-    return 'file ' + f.filename + ' uploaded successfully'
+    # return 'file ' + f.filename + ' uploaded successfully'
+    print('file ' + f.filename + ' uploaded successfully')
+    return render_template('UploadHTML.html', name=f.filename)
 
 
 if __name__ == "__main__":

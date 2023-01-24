@@ -137,7 +137,7 @@
 
    4. Now, clone the git repository by running the following command:    
 
-        ***git clone https://github.com/idoashke/OCIFundamentals.git***
+        ***git clone https://github.com/idoashke/-OCIFundamentals.git***
 
 
 5. **STEP 5 : Edit The Config File**

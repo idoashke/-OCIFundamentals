@@ -175,12 +175,14 @@
 
     2. Run the following commands to open port 5000 in the Linux firewall:
 
-        1. &nbsp;***sudo firewall-cmd --permanent --zone=public --add-port=5000/tcp***
-        2. &nbsp;***sudo firewall-cmd --reload***
+        1. ***sudo firewall-cmd --permanent --zone=public --add-port=5000/tcp***
+        2. ***sudo firewall-cmd --reload***
 
     3. Run the following command to run the application:
 
         ***python3 flask/OCIFundamentalWorkshop-Instance.py***
+
+    4. Navigate to the address **http://<your_instance_public_ip>:5000** in your browser and start uploading!
 
 
 * **If you get the errors "address already in use" or "the server couldnt be started, because another server runs on that port", simply run the following command:**

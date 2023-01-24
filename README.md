@@ -36,10 +36,6 @@
 
         ![drawing](./SS/step1/change_bucket_visibility.png)
 
-    8. Select **Create Bucket**
-
-        ![drawing](./SS/step1/.png)
-
    
 2. **STEP 2 : Create ADB (Autonomous Database)**
 

@@ -48,28 +48,16 @@ response = requests.get('http://169.254.169.254/opc/v2/instance/', headers=heade
 compId = response.json()['compartmentId']
 namespace = ""
 region = response.json()['regionInfo']['regionIdentifier']
-# bucketName = 'oci-fundamentals-bucket'
 
 signer = oci.auth.signers.InstancePrincipalsSecurityTokenSigner()
-
-# compute_client = oci.core.ComputeClient(config={}, signer=signer)
-# instance_id = response.json()['id']
-# instance_info = compute_client.get_instance(instance_id=instance_id)
-# print(instance_info)
 
 ### Getting instance metadata - End
 
 
 
 ### | ADB connection
-# CONNECTION_STRING = "mongodb://admin:QQww123456__@G0D09E25E4D622F-ADB.adb.il-jerusalem-1.oraclecloudapps.com:27017/admin?authMechanism=PLAIN&authSource=$external&ssl=true&retryWrites=false&loadBalanced=true"
 client = MongoClient(CONNECTION_STRING)
 db_name = 'admin'
-# coll_name = 'details'
-
-
-print(client.list_database_names())
-print(client.get_database(name='admin').list_collection_names())
 
 ### ADB connection - End
 
@@ -78,9 +66,6 @@ print(client.get_database(name='admin').list_collection_names())
 ### | Get db & collection
 db = client.get_database(name=db_name)
 coll = db.get_collection(name=coll_name) # Use coll.insert_one to add documents to the collection
-
-# db = client.get_database(name='admin')
-# coll = db.get_collection(name='details') # Use coll.insert_one to add documents to the collection
 
 ### Get db & collection - End
 
@@ -92,7 +77,6 @@ list = []
 def read_from_db():
     list.clear()
     for doc in coll.find():
-    #   print(doc)
         list.append({'Name': doc['name'], 'Date': doc['date'], 'Link': doc['link']})
 
 ### Read from db all documents from the collection - End
@@ -102,9 +86,7 @@ def read_from_db():
 ### | Object Storage 
 object_storage_client = oci.object_storage.ObjectStorageClient(config={}, signer=signer)
 namespace = object_storage_client.get_namespace().data
-# print(namespace)
 
-# def upload_to_object_storage(path:str,name:str,bucket_name:str,object_storage_client,namespace): 
 def upload_to_object_storage(file,file_name:str,bucket_name:str,object_storage_client,namespace): 
     object_storage_client.put_object(namespace,bucket_name,file_name,file) 
     print("Finished uploading {}".format(file_name)) 
@@ -114,7 +96,6 @@ def upload_to_object_storage(file,file_name:str,bucket_name:str,object_storage_c
 
 ### | Generate object link
 def get_object_link(os_region, os_namespace, bucket_name, file_name):
-    # https://objectstorage.region.oraclecloud.com/n/object-storage-namespace/b/bucket/o/filename
     return 'https://objectstorage.' + os_region + '.oraclecloud.com/n/' + os_namespace + '/b/' + bucket_name + '/o/' + file_name
 
 ### Generate object link - End

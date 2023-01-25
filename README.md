@@ -3,7 +3,7 @@
 
 <ins>**Lab 1 – OCI Fundamentals** </ins>
 
-1. **STEP 1 : Create Dynamic Group and Policy**
+1. **STEP 1 : Create Dynamic Group and Policies**
 
    1. First, make sure you're using the right region - Israel Central (Jerusalem)
 

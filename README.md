@@ -1,12 +1,13 @@
 # OCI Fundamentals Workshop
 
+
+<ins>**Lab 1 – OCI Fundamentals** </ins>
+
 * **Prerequisites:**
 
     1. VCN
     2. Instance
 
-
-<ins>**Lab 1 – OCI Fundamentals** </ins>
 
 1. **STEP 1 : Create Dynamic Group and Policies**
 

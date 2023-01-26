@@ -57,7 +57,12 @@
             2. **Description (optional):** A friendly description
             3. **Compartment:** Select your compartment
             4. Switch the toggle **Show manual editor** and add the following policies:
+
+                    Allow dynamic-group <your_dg_name> to use buckets in tenancy
+
+                    Allow dynamic-group <your_dg_name> to manage object-family in tenancy
                     
+            * ***The new policies will go into effect typically within 10 seconds***
 
             ![drawing](./SS/step0/create_policy.png)
 

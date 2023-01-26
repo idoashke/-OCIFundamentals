@@ -1,5 +1,10 @@
 # OCI Fundamentals Workshop
 
+* **Prerequisites:**
+
+    1. VCN
+    2. Instance
+
 
 <ins>**Lab 1 – OCI Fundamentals** </ins>
 

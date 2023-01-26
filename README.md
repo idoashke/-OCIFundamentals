@@ -56,7 +56,7 @@
             1. **Name:** A unique name for the policy
             2. **Description (optional):** A friendly description
             3. **Compartment:** Select your compartment
-            4. Switch the toggle **Show manual editor** and add the following policies:
+            4. Switch the **Show manual editor** toggle on and add the following policies:
 
                     Allow dynamic-group <your_dg_name> to use buckets in tenancy
 
